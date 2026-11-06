@@ -32,7 +32,7 @@ public static class VRPrepareScene
     static int FixEventSystems()
     {
         int swapped = 0;
-        foreach (var es in Object.FindObjectsByType<EventSystem>(FindObjectsInactive.Include))
+        foreach (var es in Object.FindObjectsByType<EventSystem>(FindObjectsInactive.Include, FindObjectsSortMode.None))
         {
             var legacy = es.GetComponent<StandaloneInputModule>();
             if (legacy == null && es.GetComponent<InputSystemUIInputModule>() != null)

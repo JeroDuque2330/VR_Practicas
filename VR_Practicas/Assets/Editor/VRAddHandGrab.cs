@@ -17,7 +17,7 @@ public static class VRAddHandGrab
     static void ToAllProducts()
     {
         var targets = Object
-            .FindObjectsByType<PW.ProductGameObject>(FindObjectsInactive.Include)
+            .FindObjectsByType<PW.ProductGameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None)
             .Select(p => p.gameObject);
         Apply(targets, "products");
     }

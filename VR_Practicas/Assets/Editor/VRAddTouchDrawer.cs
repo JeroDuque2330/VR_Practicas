@@ -33,7 +33,7 @@ public static class VRAddTouchDrawer
     static void ToCabinetDrawers()
     {
         var found = new System.Collections.Generic.List<GameObject>();
-        foreach (var t in Object.FindObjectsByType<Transform>(FindObjectsInactive.Include))
+        foreach (var t in Object.FindObjectsByType<Transform>(FindObjectsInactive.Include, FindObjectsSortMode.None))
             if (t.name.StartsWith("C Drawer"))
                 found.Add(t.gameObject);
         Apply(found);
