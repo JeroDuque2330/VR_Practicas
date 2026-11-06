@@ -35,7 +35,7 @@ namespace PW
 
         public void ServeMe()
         {
-            var PlayerSlots = FindObjectOfType<PlayerSlots>();
+            var PlayerSlots = FindAnyObjectByType<PlayerSlots>();
 
             if (PlayerSlots != null)
             {

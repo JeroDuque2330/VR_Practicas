@@ -45,7 +45,7 @@ namespace PW
 
         private void BasicGameEvents_onProductAddedToSlot(int orderID)
         {
-            var orderGenerator = FindObjectOfType<OrderGenerator>();
+            var orderGenerator = FindAnyObjectByType<OrderGenerator>();
             
                 //find the first empty index
                 var emptyIndex = Array.IndexOf(slotItems, -1);

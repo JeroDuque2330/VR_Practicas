@@ -93,7 +93,7 @@ namespace PW
 
         void AddToPlayerSpot()
         {
-            var PlayerSlots = FindObjectOfType<PlayerSlots>();
+            var PlayerSlots = FindAnyObjectByType<PlayerSlots>();
             var product = GetComponent<DrinkableProduct>();
             if (product != null && PlayerSlots != null)
             {

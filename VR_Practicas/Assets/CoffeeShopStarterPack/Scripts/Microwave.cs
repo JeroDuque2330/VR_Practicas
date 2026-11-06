@@ -115,7 +115,7 @@ namespace PW
         {
             if (!doorIsOpen && !isEmpty)
             {
-                var PlayerSlots = FindObjectOfType<PlayerSlots>();
+                var PlayerSlots = FindAnyObjectByType<PlayerSlots>();
                 if (PlayerSlots.CanHoldItem(currentProduct.orderID))
                 {
 
